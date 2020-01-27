@@ -38,6 +38,45 @@ namespace BL
             }
 
         }
+        
+        /*
+        public List<Employee> GetAllEmployees()
+        {
+            List<Employee> employees = new List<Employee>();
+
+            try
+            {
+                DB.Open();
+
+                // 1) call the DAL to run the query
+                SqlDataReader reader = DB.ExecuteReader("Select * from Employees");
+
+                // 2) map the result to list of objects
+                while (reader.Read())
+                {
+                    employees.Add(new Employee()
+                    {
+                        ID = int.Parse(reader["EmployeeID"].ToString()),
+                        FirstName = reader["FirstName"].ToString(),
+                        LastName = reader["LastName"].ToString(),
+                        Title = reader["Title"].ToString()
+                    });
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                DB.Close();
+            }
+
+            return employees;
+        }
+        */
 
     }
 }
